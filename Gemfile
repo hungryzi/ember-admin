@@ -7,6 +7,9 @@ gem 'rails', '3.2.12'
 
 gem 'pg'
 
+gem 'activeadmin'
+gem 'meta_search',    '>= 1.1.0.pre'
+
 group :test do
   gem 'rspec-rails'
 end
