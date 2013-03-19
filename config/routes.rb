@@ -1,4 +1,8 @@
 EmberAdmin::Application.routes.draw do
+  namespace :api do
+    resources :categories
+  end
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
