@@ -3,16 +3,20 @@ EmberAdmin.CategoriesNewController = Ember.ObjectController.extend
   buttonTitle: 'Create'
 
   save: ->
+    # When to remove these?
+    @content.on 'didCreate', (content) =>
+      @transitionToRoute('categories.show', content)
+    @content.on 'becameError', (content) =>
+      @error("Server errors. Please try again.")
+
     @store.commit()
-    @content.addObserver 'id', @, 'afterSave'
+
+  error: (errorMessage) ->
+    @set 'messages', [errorMessage]
 
   cancel: ->
     @content.deleteRecord()
     @transitionToRoute('categories.index')
-
-  afterSave: ->
-    @content.removeObserver 'id', @, 'afterSave'
-    @transitionToRoute('categories.show', @content)
 
 EmberAdmin.CategoriesEditController = Ember.ObjectController.extend
   headerTitle: 'Update'
@@ -24,7 +28,7 @@ EmberAdmin.CategoriesEditController = Ember.ObjectController.extend
 
   cancel: ->
     if @content.isDirty
-      @content.rollback
+      @content.rollback()
     @transitionToRoute('categories.show', @content)
 
   destroy: ->

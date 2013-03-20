@@ -6,12 +6,15 @@ section.right
   linkTo "categories.index" | Back
 
 form
+  Ember.ErrorSummary errorsBinding="controller.messages"
   div
     label for=nameField.elementId Name
     Ember.TextField valueBinding="name" name="name" viewName="nameField"
+    Ember.ErrorInline errorsBinding="errors.name"
   div
     label for=priorityField.elementId Priority
     Ember.TextField valueBinding="priority" name="priority" viewName="priorityField"
+    Ember.ErrorInline errorsBinding="errors.priority"
 
   a.button.small{action save} href="#" = buttonTitle
   a.button.small.secondary{action cancel} href="#" Cancel
