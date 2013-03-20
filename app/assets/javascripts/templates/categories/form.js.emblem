@@ -1,0 +1,18 @@
+h3
+  = headerTitle
+  |  category
+
+section.right
+  linkTo "categories.index" | Back
+
+form
+  div
+    label for=nameField.elementId Name
+    Ember.TextField valueBinding="name" name="name" viewName="nameField"
+  div
+    label for=priorityField.elementId Priority
+    Ember.TextField valueBinding="priority" name="priority" viewName="priorityField"
+
+  a.button.small{action save} href="#" = buttonTitle
+  a.button.small.secondary{action cancel} href="#" Cancel
+

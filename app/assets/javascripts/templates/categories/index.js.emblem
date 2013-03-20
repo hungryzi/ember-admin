@@ -1,0 +1,23 @@
+h3 Categories
+
+section.right
+  linkTo "categories.new" | Create new category
+
+table.large-12.columns
+  thead
+    tr
+      th Id
+      th Name
+      th Priority
+      th
+  tbody
+    each controller
+      tr
+        td = id
+        td
+          linkTo "categories.show" this
+            = name
+        td = priority
+        td
+          linkTo "categories.edit" this | Edit
+

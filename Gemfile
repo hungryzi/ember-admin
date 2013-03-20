@@ -8,6 +8,7 @@ gem 'rails', '3.2.12'
 gem 'pg'
 
 gem 'ember-rails', git: 'git://github.com/emberjs/ember-rails.git'
+gem 'emblem-rails'
 
 gem 'activeadmin'
 gem 'meta_search',    '>= 1.1.0.pre'

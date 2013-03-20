@@ -1,0 +1,16 @@
+h3 Category Details
+
+section.right
+  linkTo "categories.index" | Back
+  linkTo "categories.edit" this | Edit
+
+div
+  label Id
+  div = id
+div
+  label Name
+  div = name
+div
+  label Priority
+  div = priority
+
