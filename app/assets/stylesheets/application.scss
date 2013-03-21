@@ -10,6 +10,20 @@
  *
  *= require_self
  *= require_tree .
- *= require foundation_and_overrides
  */
+
+@import "bootstrap";
+
+.l-body { margin-top: 60px; }
+
+.title {
+  float: left;
+}
+
+.title-page {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  font-size: 20px;
+  font-weight: bold;
+}
 

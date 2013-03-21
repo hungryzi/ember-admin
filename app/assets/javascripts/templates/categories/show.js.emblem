@@ -1,16 +1,21 @@
-h3 Category Details
+header.span12
+  .title.title-page.pull-left Category Details
 
-section.right
-  linkTo "categories.index" | Back
-  linkTo "categories.edit" this | Edit
+  section.pull-right
+    ul.nav.nav-pills
+      li
+        linkTo "categories.index" | Back
+      li
+        linkTo "categories.edit" this | Edit
 
-div
-  label Id
-  div = id
-div
-  label Name
-  div = name
-div
-  label Priority
-  div = priority
+section.span12
+  dl
+    dt Id
+    dd = id
+  dl
+    dt Name
+    dd = name
+  dl
+    dt Priority
+    dd = priority
 

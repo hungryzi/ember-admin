@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require foundation
 //= require handlebars
 //= require ember
 //= require ember-data
@@ -21,5 +20,5 @@
 EmberAdmin = Ember.Application.create();
 
 //= require_tree .
+//= require bootstrap
 
-$(document).foundation();

@@ -1,18 +1,12 @@
-nav.top-bar
-  ul.title-area
-    li.name
-      h1
-        a href="#" Ember Admin
-    li.toggle-topbar.menu-icon
-      a href="#"
-        span Menu
+.navbar.navbar-inverse.navbar-fixed-top
+  .navbar-inner
+    .container
+      a.brand href="#" Ember Admin
+      ul.nav
+        li.active
+          linkTo "categories" | Categories
 
-  section.top-bar-section
-    ul.left
-      li.divider
-      li.active
-        linkTo "categories" | Categories
-
-section.row
-  == outlet
+.container.l-body
+  .row
+    == outlet
 

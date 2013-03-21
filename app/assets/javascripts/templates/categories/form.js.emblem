@@ -1,21 +1,23 @@
-h3
-  = headerTitle
-  |  category
+header.span12
+  .title.title-page = headerTitle
 
-section.right
-  linkTo "categories.index" | Back
+  if id
+    button.btn.btn-small.btn-danger.pull-right{action destroy} Delete
 
-form
+form.form-horizontal.span12
   Ember.ErrorSummary errorsBinding="controller.messages"
-  div
-    label for=nameField.elementId Name
-    Ember.TextField valueBinding="name" name="name" viewName="nameField"
-    Ember.ErrorInline errorsBinding="errors.name"
-  div
-    label for=priorityField.elementId Priority
-    Ember.TextField valueBinding="priority" name="priority" viewName="priorityField"
-    Ember.ErrorInline errorsBinding="errors.priority"
+  .control-group
+    label for=nameField.elementId class="control-label" Name
+    .controls
+      Ember.TextField valueBinding="name" name="name" viewName="nameField"
+      Ember.ErrorInline errorsBinding="errors.name"
+  .control-group
+    label for=priorityField.elementId class="control-label" Priority
+    .controls
+      Ember.TextField valueBinding="priority" name="priority" viewName="priorityField"
+      Ember.ErrorInline errorsBinding="errors.priority"
 
-  a.button.small{action save} href="#" = buttonTitle
-  a.button.small.secondary{action cancel} href="#" Cancel
+  .form-actions
+    button.btn.btn-small.btn-primary{action save} = buttonTitle
+    button.btn.btn-small{action cancel} Cancel
 

@@ -1,3 +1,2 @@
 == template 'categories/form'
-a.button.small.alert{action destroy} href="#" Delete
 

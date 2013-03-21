@@ -65,6 +65,8 @@ GEM
       barber (>= 0.4.1)
       emblem-source
     bcrypt-ruby (3.0.1)
+    bootstrap-sass (2.3.1.0)
+      sass (~> 3.2)
     bourbon (2.1.1)
       sass (>= 3.1)
     builder (3.0.4)
@@ -193,14 +195,13 @@ GEM
       multi_json (~> 1.0, >= 1.0.2)
     warden (1.2.1)
       rack (>= 1.0)
-    zurb-foundation (4.0.8)
-      sass (>= 3.2.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   activeadmin
+  bootstrap-sass
   coffee-rails (~> 3.2.1)
   ember-rails!
   emblem-rails
@@ -212,4 +213,3 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
-  zurb-foundation

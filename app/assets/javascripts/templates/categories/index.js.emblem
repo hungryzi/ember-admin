@@ -1,9 +1,9 @@
-h3 Categories
+header.span12
+  .title.title-page = headerTitle
 
-section.right
-  linkTo "categories.new" | Create new category
+  linkTo "categories.new" class="pull-right" | Create new category
 
-table.large-12.columns
+table.table.table-condensed.span12
   thead
     tr
       th Id
