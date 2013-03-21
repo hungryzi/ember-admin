@@ -1,0 +1,35 @@
+header.span12
+  .title.title-page.pull-left User Details
+
+  section.pull-right
+    ul.nav.nav-pills
+      li
+        linkTo "users.index" | Back
+      li
+        linkTo "users.edit" this | Edit
+
+section.span12
+  dl
+    dt Id
+    dd = id
+  dl
+    dt Email
+    dd = email
+  dl
+    dt Bio
+    dd = bio
+  dl
+    dt Age
+    dd = age
+  dl
+    dt Dob
+    dd = dob
+  dl
+    dt Gender
+    dd = gender
+  dl
+    dt Created at
+    dd = created_at
+  dl
+    dt Updated at
+    dd = updated_at

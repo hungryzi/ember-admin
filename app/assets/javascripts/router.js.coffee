@@ -8,3 +8,10 @@ EmberAdmin.Router.map (match)->
     @route 'show',
       path: ':category_id'
 
+  @resource 'users', ->
+    @route 'new'
+    @route 'edit',
+      path: ':user_id/edit'
+    @route 'show',
+      path: ':user_id'
+

@@ -1,0 +1,30 @@
+header.span12
+  .title.title-page = headerTitle
+
+  linkTo "users.new" class="pull-right" | Create new
+
+table.table.table-condensed.span12
+  thead
+    tr
+      th Id
+      th Email
+      th Bio
+      th Age
+      th Dob
+      th Gender
+      th Created at
+      th Updated at
+      th
+  tbody
+    each controller
+      tr
+        td = id
+        td = email
+        td = bio
+        td = age
+        td = dob
+        td = gender
+        td = created_at
+        td = updated_at
+        td
+          linkTo "users.edit" this | Edit

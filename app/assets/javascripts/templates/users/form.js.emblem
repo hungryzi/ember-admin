@@ -1,0 +1,18 @@
+header.span12
+  .title.title-page = headerTitle
+
+  if id
+    button.btn.btn-small.btn-danger.pull-right{action destroy} Delete
+
+form.form-horizontal.span12
+  Ember.ErrorSummary errorsBinding="controller.messages"
+  Bootstrap.Forms.TextField valueBinding="email"
+  Bootstrap.Forms.TextArea valueBinding="bio"
+  Bootstrap.Forms.TextField valueBinding="age"
+  Bootstrap.Forms.TextField valueBinding="dob"
+  Bootstrap.Forms.TextField valueBinding="gender"
+  Bootstrap.Forms.TextField valueBinding="created_at"
+  Bootstrap.Forms.TextField valueBinding="updated_at"
+  .form-actions
+    button.btn.btn-small.btn-primary{action save} = buttonTitle
+    button.btn.btn-small{action cancel} Cancel

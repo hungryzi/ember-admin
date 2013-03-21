@@ -3,8 +3,10 @@
     .container
       a.brand href="#" Ember Admin
       ul.nav
-        li.active
+        li
           linkTo "categories" | Categories
+        li
+          linkTo "users" | Users
 
 .container.l-body
   .row
