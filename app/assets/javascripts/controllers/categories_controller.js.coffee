@@ -1,5 +1,5 @@
 EmberAdmin.CategoriesNewController = Ember.ObjectController.extend
-  headerTitle: 'Create'
+  headerTitle: 'Create category'
   buttonTitle: 'Create'
 
   save: ->
@@ -15,11 +15,11 @@ EmberAdmin.CategoriesNewController = Ember.ObjectController.extend
     @set 'messages', [errorMessage]
 
   cancel: ->
-    @content.deleteRecord()
+    @store.get('defaultTransaction').rollback()
     @transitionToRoute('categories.index')
 
 EmberAdmin.CategoriesEditController = Ember.ObjectController.extend
-  headerTitle: 'Update'
+  headerTitle: 'Update category'
   buttonTitle: 'Update'
 
   save: ->

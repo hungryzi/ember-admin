@@ -15,6 +15,7 @@
 //= require handlebars
 //= require ember
 //= require ember-data
+//= require ember-bootstrap
 //= require_self
 //= require ember_admin
 EmberAdmin = Ember.Application.create();

@@ -6,16 +6,9 @@ header.span12
 
 form.form-horizontal.span12
   Ember.ErrorSummary errorsBinding="controller.messages"
-  .control-group
-    label for=nameField.elementId class="control-label" Name
-    .controls
-      Ember.TextField valueBinding="name" name="name" viewName="nameField"
-      Ember.ErrorInline errorsBinding="errors.name"
-  .control-group
-    label for=priorityField.elementId class="control-label" Priority
-    .controls
-      Ember.TextField valueBinding="priority" name="priority" viewName="priorityField"
-      Ember.ErrorInline errorsBinding="errors.priority"
+
+  Bootstrap.Forms.TextField valueBinding="name"
+  Bootstrap.Forms.TextField valueBinding="priority"
 
   .form-actions
     button.btn.btn-small.btn-primary{action save} = buttonTitle
