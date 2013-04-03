@@ -1,6 +1,4 @@
 EmberAdmin.NewController = Ember.ObjectController.extend
-  resource: ""
-  plural: ""
   verb: 'Create'
 
   save: ->
@@ -17,4 +15,21 @@ EmberAdmin.NewController = Ember.ObjectController.extend
   cancel: ->
     @store.get('defaultTransaction').rollback()
     history.back()
+
+EmberAdmin.EditController = Ember.ObjectController.extend
+  verb: 'Update'
+
+  save: ->
+    @store.commit()
+    @transitionToRoute("#{@plural}.show", @content)
+
+  cancel: ->
+    if @content.isDirty
+      @content.rollback()
+    history.back()
+
+  destroy: ->
+    @content.deleteRecord()
+    @store.commit()
+    @transitionToRoute("#{@plural}.index")
 

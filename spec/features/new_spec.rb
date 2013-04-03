@@ -44,7 +44,7 @@ feature "new page", js: true do
       record = FactoryGirl.build resource
 
       attributes.each do |attr|
-        page.form.fill_in_for attr, with: record.send(attr)
+        page.form.fill_in_for attr, record.send(attr)
       end
 
       show_page = page.form.submit

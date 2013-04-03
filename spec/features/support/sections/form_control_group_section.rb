@@ -1,4 +1,9 @@
 class FormControlGroupSection < BaseSection
   element :label, ".control-label"
-  elements :controls, ".controls"
+  element :input, "input"
+  element :texarea, "textarea"
+
+  def label_text
+    label.text
+  end
 end

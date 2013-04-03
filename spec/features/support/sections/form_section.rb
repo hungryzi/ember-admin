@@ -16,8 +16,20 @@ class FormSection < BaseSection
     ShowPage.new(parent_page.resource_name)
   end
 
-  def fill_in_for attr, options
-    fill_in attr.to_s.humanize, options
+  def control_for attr
+    attr_group = control_groups.find do |group|
+      group.label_text == attr.to_s.humanize.capitalize
+    end
+    if attr_group
+      attr_group.input || attr_group.textarea
+    end
+  end
+
+  def fill_in_for attr, value
+    control = control_for(attr)
+    if control
+      control.set value
+    end
   end
 end
 
