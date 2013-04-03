@@ -6,7 +6,7 @@ class IndexPage < BasePage
   def initialize resource_name
     super resource_name
 
-    IndexPage.set_url "/#/#{@resource_name.pluralize}"
+    IndexPage.set_url "/#/#{@resource_name}"
   end
 end
 

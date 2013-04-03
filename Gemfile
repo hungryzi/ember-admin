@@ -7,7 +7,7 @@ gem 'rails', '3.2.12'
 
 gem 'pg'
 
-gem 'ember-rails', git: 'git://github.com/emberjs/ember-rails.git'
+gem 'ember-rails', git: 'git://github.com/emberjs/ember-rails.git', ref: 'acdbe5660540d4312b7a5b4b2a648085b90daf5e'
 gem 'emblem-rails'
 
 gem 'activeadmin'
@@ -26,6 +26,8 @@ group :test, :development do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'site_prism'
+
+  gem 'debugger'
 end
 
 # Gems used only for assets and not required

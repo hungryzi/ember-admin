@@ -1,5 +1,5 @@
 header.span12
-  .title.title-page = headerTitle
+  .title.title-page {{verb}} {{resource}}
 
   if id
     button.btn.btn-small.btn-danger.pull-right{action destroy} Delete
@@ -11,6 +11,6 @@ form.form-horizontal.span12
   Bootstrap.Forms.TextField valueBinding="priority"
 
   .form-actions
-    button.btn.btn-small.btn-primary{action save} = buttonTitle
-    button.btn.btn-small{action cancel} Cancel
+    button.btn.btn-small.btn-primary.spec-submit-button{action save} = verb
+    button.btn.btn-small.spec-cancel-button{action cancel} Cancel
 
