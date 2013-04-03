@@ -9,9 +9,9 @@ class Api::CategoriesController < ApplicationController
     category = Category.new(params[:category])
 
     if category.save
-      respond_with category
+      render json: category
     else
-      respond_with category, status: 422
+      render json: category, status: 422
     end
   end
 

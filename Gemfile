@@ -13,8 +13,19 @@ gem 'emblem-rails'
 gem 'activeadmin'
 gem 'meta_search',    '>= 1.1.0.pre'
 
-group :test do
+group :development do
+  gem 'rb-fsevent', '~> 0.9'
+  gem 'guard-rspec'
+end
+
+group :test, :development do
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'ffaker'
+
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'site_prism'
 end
 
 # Gems used only for assets and not required

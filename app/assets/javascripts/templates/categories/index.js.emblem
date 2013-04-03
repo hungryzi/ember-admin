@@ -1,7 +1,7 @@
 header.span12
   .title.title-page = headerTitle
 
-  linkTo "categories.new" class="pull-right" | Create new category
+  linkTo "categories.new" class="spec-link-to-new pull-right" | Create new category
 
 table.table.table-condensed.span12
   thead
@@ -15,9 +15,9 @@ table.table.table-condensed.span12
       tr
         td = id
         td
-          linkTo "categories.show" this
+          linkTo "categories.show" this class="spec-link-to-show"
             = name
         td = priority
         td
-          linkTo "categories.edit" this | Edit
+          linkTo "categories.edit" this class="spec-link-to-edit" | Edit
 
