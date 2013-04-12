@@ -18,7 +18,11 @@
 //= require ember-bootstrap
 //= require_self
 //= require ember_admin
-EmberAdmin = Ember.Application.create();
+EmberAdmin = Ember.Application.create({
+  ready: function(e) {
+    EmberAdmin.Resources.register("category", { plural: "categories" });
+  }
+});
 
 //= require_tree .
 //= require bootstrap

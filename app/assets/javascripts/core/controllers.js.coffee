@@ -4,7 +4,7 @@ EmberAdmin.NewController = Ember.ObjectController.extend
   save: ->
     # When to remove these?
     @content.addObserver 'id', @, ->
-      @transitionToRoute("#{@plural}.show", @content)
+      @transitionToRoute("#{@resource.plural}.show", @content)
     @content.on 'becameError', (content) =>
       @error("Server errors. Please try again.")
     @store.commit()
@@ -21,7 +21,7 @@ EmberAdmin.EditController = Ember.ObjectController.extend
 
   save: ->
     @store.commit()
-    @transitionToRoute("#{@plural}.show", @content)
+    @transitionToRoute("#{@resource.plural}.show", @content)
 
   cancel: ->
     if @content.isDirty
@@ -31,5 +31,5 @@ EmberAdmin.EditController = Ember.ObjectController.extend
   destroy: ->
     @content.deleteRecord()
     @store.commit()
-    @transitionToRoute("#{@plural}.index")
+    @transitionToRoute("#{@resource.plural}.index")
 

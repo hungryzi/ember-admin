@@ -9,4 +9,3 @@
 #= require ./router
 #= require_self
 
-EmberAdmin.initialize()

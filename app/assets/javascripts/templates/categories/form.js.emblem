@@ -1,5 +1,5 @@
 header.span12
-  .title.title-page {{verb}} {{resource}}
+  .title.title-page {{verb}} {{resource.name}}
 
   if id
     button.btn.btn-small.btn-danger.spec-delete-button.pull-right{action destroy} Delete
